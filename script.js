@@ -49,25 +49,33 @@ $(document).ready(function(){
     });
 
     // owl carousel script
-    $('.carousel').owlCarousel({
-        margin: 20,
+    $(".carousel").owlCarousel({
         loop: true,
+        margin: 20,
+        nav: true,
+        dots: true,
         autoplay: true,
-        autoplayTimeOut: 2000,
-        autoplayHoverPause: true,
+        autoplayTimeout: 2000,
         responsive: {
-            0:{
-                items: 1,
-                nav: false
+            0: {
+                items: 1
             },
-            600:{
-                items: 2,
-                nav: false
+            600: {
+                items: 2
             },
-            1000:{
-                items: 3,
-                nav: false
+            1000: {
+                items: 3
             }
         }
     });
+
+    $('.animate__animated').each(function() {
+            var element = $(this);
+
+            element.waypoint(function() {
+                element.addClass('animate__fadeIn');
+            }, {
+                offset: '80%'
+            });
+        });
 });

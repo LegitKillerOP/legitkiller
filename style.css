@@ -35,7 +35,7 @@
         padding: 0 80px;
         margin: auto;
     }
-    .about, .services, .skills, .photo, .server, .contact, footer{
+    .about, .services, .skills, .photo, .server,.testimonials, .contact, footer{
         font-family: 'Poppins', sans-serif;
     }
     .about .about-content,
@@ -70,7 +70,7 @@
         position: absolute;
         bottom: -8px;
         left: 50%;
-        font-size: 20px;
+        font-size: 18px;
         color: crimson;
         padding: 0 5px;
         background: #fff;
@@ -165,7 +165,7 @@
     /* home section styling */
     .home{
         display: flex;
-        background: url(https://e1.pxfuel.com/desktop-wallpaper/67/470/desktop-wallpaper-minecraft-landscape-blurred-and-backgrounds-minecraft-landscape.jpg) no-repeat center;
+        background: url(images/background.jpg) no-repeat center;
         height: 100vh;
         color: #fff;
         min-height: 500px;
@@ -289,8 +289,12 @@
         width: calc(33% - 20px);
         background: #222;
         text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-radius: 6px;
         padding: 50px 25px;
+        height: 300px;
         cursor: pointer;
         transition: all 0.3s ease;
     }
@@ -488,7 +492,7 @@
         background: crimson!important;
     }
     .server .title::after{
-        content: "server i worked for";
+        content: "i worked for";
         background-color: #fff;
     }
     .server .carousel .card{
@@ -528,17 +532,93 @@
     .server .carousel .card:hover img{
         border-color: #fff;
     }
+    /* testimonials section styling */
+    .testimonials{
+        background: #111;
+        color: #fff;
+    }
+    .testimonials .title::after{
+        content: "what my clients say";
+        background-color: #111;
+    }
+    .testimonials .carousel{
+        display: flex;
+        gap: 20px;
+    }
+    .testimonials .carousel .card{
+        flex: 1;
+        background: #222;
+        border-radius: 6px;
+        padding: 25px 35px;
+        height: 250px;
+        text-align: center;
+        overflow: hidden;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .testimonials .carousel .card:hover{
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    }
+    .testimonials .carousel .card .box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+    }
+    .testimonials .carousel .card .client-logo{
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        margin-bottom: 15px;
+    }
+    .testimonials .carousel .card .text{
+        font-size: 20px;
+        font-weight: 600;
+        margin: 10px 0 7px 0;
+        color: crimson;
+    }
+    .testimonials .carousel .card p{
+        font-size: 16px;
+        text-align: justify;
+        line-height: 1.5;
+        margin-top: auto;
+    }
+    .owl-dots{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .owl-dot{
+        height: 13px;
+        width: 13px;
+        margin: 0 5px;
+        outline: none!important;
+        border-radius: 50%;
+        border: 2px solid crimson!important;
+        transition: all 0.3s ease;
+    }
+    .owl-dot.active{
+        width: 35px;
+        border-radius: 14px;
+    }
+    .owl-dot.active,
+    .owl-dot:hover{
+        background: crimson!important;
+    }
 
     /* contact section styling */
 
     .contact{
-        background-color: #111;
-        color: #fff;
+        background-color: #fff;
+        color: #111;
     }
     .contact .title::after{
         content: "get in touch";
-        background-color: #111;
-        color: #fff;
+        background-color: #fff;
+        color: crimson;
     }
     .contact .contact-content .column{
         width: calc(50% - 30px);
@@ -570,7 +650,7 @@
         font-weight: 500;
     }
     .contact .contact-content .info .sub-title{
-        color: #fff;
+        color: #111;
     }
     .contact .right form .fields{
         display: flex;
